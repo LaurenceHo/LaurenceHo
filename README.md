@@ -1,6 +1,6 @@
 Hi, here is my GitHub status:
 
-![Laurence's github stats](https://github-readme-stats.vercel.app/api?username=LaurenceHo&show_icons=true&count_private=true&theme=calm&hide=contribs,stars,issues,prs&hide_rank=true)
+[![Laurence's github stats](https://github-readme-stats.vercel.app/api?username=LaurenceHo&show_icons=true&count_private=true&theme=calm&hide=contribs,stars,issues,prs&hide_rank=true)](https://github.com/anuraghazra/github-readme-stats)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LaurenceHo&layout=compact&card_width=445)](https://github.com/anuraghazra/github-readme-stats)
 
