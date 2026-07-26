@@ -1,0 +1,53 @@
+name: Update GitHub stats cards
+
+# Renders the profile stats cards to SVG files inside this repository and commits
+# them. The README points at those local files, so the profile never depends on a
+# third-party service being reachable when someone loads the page.
+
+on:
+  schedule:
+    # 18:00 UTC = 04:00 the next morning in Sydney (AEST, UTC+10).
+    - cron: '0 18 * * *'
+  workflow_dispatch: # lets you trigger a run by hand from the Actions tab
+
+# The job pushes the regenerated SVGs back to the default branch.
+permissions:
+  contents: write
+
+# Never let two runs race each other into a push conflict.
+concurrency:
+  group: stats-cards
+  cancel-in-progress: true
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the profile repository
+        uses: actions/checkout@v7
+
+      - name: Generate the overall stats card
+        uses: stats-organization/github-readme-stats-action@v2.0.1
+        with:
+          card: stats
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          options: username=LaurenceHo&show_icons=true&theme=dracula&hide=stars,contribs,issues&show=reviews&hide_rank=true&card_width=445
+
+      - name: Generate the top languages card
+        uses: stats-organization/github-readme-stats-action@v2.0.1
+        with:
+          card: top-langs
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          options: username=LaurenceHo&layout=compact&theme=dracula&card_width=445
+
+      - name: Commit the cards, but only if they actually changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add profile/stats.svg profile/top-langs.svg
+          # `git commit` fails when there is nothing staged, so guard it and keep
+          # the run green on days where the numbers did not move.
+          git diff --staged --quiet || git commit -m 'chore: refresh GitHub stats cards'
+          git push
