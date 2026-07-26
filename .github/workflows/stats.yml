@@ -32,7 +32,10 @@ jobs:
           card: stats
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-          options: username=LaurenceHo&show_icons=true&theme=dracula&hide=stars,contribs,issues&show=reviews&hide_rank=true&card_width=445
+          # include_all_commits swaps the rolling "last year" window for a
+          # lifetime commit total. `prs_reviewed` is an all-time search, unlike
+          # `reviews`, which reads a last-year field that is always 0 here.
+          options: username=LaurenceHo&show_icons=true&theme=dracula&hide=stars,contribs,issues&show=prs_reviewed&hide_rank=true&card_width=445&include_all_commits=true
 
       - name: Generate the top languages card
         uses: stats-organization/github-readme-stats-action@v2.0.1
