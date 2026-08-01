@@ -21,7 +21,7 @@ A passionate full-stack developer based in Sydney, Australia. I write **Java**, 
 
 | Project | What it is |
 | --- | --- |
-| **[simple-photo-albums](https://github.com/LaurenceHo/simple-photo-albums)** · [live](https://simple-photo-albums.pages.dev) | A full-stack photo album app — Vue 3 and PrimeVue on Cloudflare Pages, a Hono API on Workers, with D1 and R2 behind it. |
+| **[simple-photo-albums](https://github.com/LaurenceHo/simple-photo-albums-demo)** · [live](https://simple-photo-albums.pages.dev) | A full-stack photo album app — Vue 3 and PrimeVue on Cloudflare Pages, a Hono API on Workers, with D1 and R2 behind it. |
 | **[react-weather-app](https://github.com/LaurenceHo/react-weather-app)** | A weather application built with React, Redux, TypeScript, Ant Design, ECharts and Firebase. |
 | **[electron-quasar-trip-management](https://github.com/LaurenceHo/electron-quasar-trip-management)** | A cross-platform desktop trip planner, built with Electron and Quasar. |
 
