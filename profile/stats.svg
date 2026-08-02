@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Laurence Ho&#39;s GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Commits  : 1059, Total PRs: 451, Total PRs Merged: 425, PRs Commented: 315, PRs Reviewed: 293</desc>
+        <desc id="descId">Total Commits  : 1005, Total PRs: 451, Total PRs Merged: 425, PRs Commented: 315, PRs Reviewed: 293</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 65.30992872694974;
+        stroke-dashoffset: 66.07670775535476;
       }
     }
   
@@ -151,7 +151,7 @@
         x="174.01"
         y="12.5"
         data-testid="commits"
-      >1.1k</text>
+      >1k</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
@@ -184,7 +184,7 @@
       >425</text>
     </g>
   </g><g transform="translate(0, 75)">
-    <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)"><a href="https://github.com/search?q=repo%3ALaurenceHo%2Fadventjs%20repo%3ALaurenceHo%2Fangular4-express-mysql%20repo%3ALaurenceHo%2Felectron-quasar-trip-management%20repo%3ALaurenceHo%2Fhealth-onboarding-form%20repo%3ALaurenceHo%2FLaurenceHo%20repo%3ALaurenceHo%2Fmy-groceries%20repo%3ALaurenceHo%2Freact-trip-planner%20repo%3ALaurenceHo%2Freact-weather-app%20repo%3ALaurenceHo%2Fsimple-photo-albums%20repo%3ALaurenceHo%2Fvue2-element-trip-planner%20owner%3ABenchmarkGlobalPtyLtd%20owner%3Apradiptabasu%20owner%3Atalentappstore%20commenter%3ALaurenceHo+-author%3ALaurenceHo&amp;type=pullrequests">
+    <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)"><a href="https://github.com/search?q=repo%3ALaurenceHo%2Fadventjs%20repo%3ALaurenceHo%2Fangular4-express-mysql%20repo%3ALaurenceHo%2Felectron-quasar-trip-management%20repo%3ALaurenceHo%2Fhealth-onboarding-form%20repo%3ALaurenceHo%2FLaurenceHo%20repo%3ALaurenceHo%2Fmy-groceries%20repo%3ALaurenceHo%2Freact-trip-planner%20repo%3ALaurenceHo%2Freact-weather-app%20repo%3ALaurenceHo%2Fsimple-photo-albums%20repo%3ALaurenceHo%2Fvue2-element-trip-planner%20owner%3ABenchmarkGlobalPtyLtd%20owner%3Atalentappstore%20commenter%3ALaurenceHo+-author%3ALaurenceHo&amp;type=pullrequests">
       
     <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
       <path d="M1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0 1 13.25 12H9.06l-2.573 2.573A1.458 1.458 0 0 1 4 13.543V12H2.75A1.75 1.75 0 0 1 1 10.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h4.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z" />
@@ -199,7 +199,7 @@
       >315</text></a>
     </g>
   </g><g transform="translate(0, 100)">
-    <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)"><a href="https://github.com/search?q=repo%3ALaurenceHo%2Fadventjs%20repo%3ALaurenceHo%2Fangular4-express-mysql%20repo%3ALaurenceHo%2Felectron-quasar-trip-management%20repo%3ALaurenceHo%2Fhealth-onboarding-form%20repo%3ALaurenceHo%2FLaurenceHo%20repo%3ALaurenceHo%2Fmy-groceries%20repo%3ALaurenceHo%2Freact-trip-planner%20repo%3ALaurenceHo%2Freact-weather-app%20repo%3ALaurenceHo%2Fsimple-photo-albums%20repo%3ALaurenceHo%2Fvue2-element-trip-planner%20owner%3ABenchmarkGlobalPtyLtd%20owner%3Apradiptabasu%20owner%3Atalentappstore%20reviewed-by%3ALaurenceHo+-author%3ALaurenceHo&amp;type=pullrequests">
+    <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)"><a href="https://github.com/search?q=repo%3ALaurenceHo%2Fadventjs%20repo%3ALaurenceHo%2Fangular4-express-mysql%20repo%3ALaurenceHo%2Felectron-quasar-trip-management%20repo%3ALaurenceHo%2Fhealth-onboarding-form%20repo%3ALaurenceHo%2FLaurenceHo%20repo%3ALaurenceHo%2Fmy-groceries%20repo%3ALaurenceHo%2Freact-trip-planner%20repo%3ALaurenceHo%2Freact-weather-app%20repo%3ALaurenceHo%2Fsimple-photo-albums%20repo%3ALaurenceHo%2Fvue2-element-trip-planner%20owner%3ABenchmarkGlobalPtyLtd%20owner%3Atalentappstore%20reviewed-by%3ALaurenceHo+-author%3ALaurenceHo&amp;type=pullrequests">
       
     <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
       <path fill-rule="evenodd" d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z"/>
