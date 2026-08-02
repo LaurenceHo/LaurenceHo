@@ -52,7 +52,48 @@ jobs:
           # 449, because an app installation token cannot see activity outside
           # this repository. If the PAT ever expires, drop both from this line
           # rather than leaving the card to publish wrong numbers.
-          options: username=LaurenceHo&show_icons=true&theme=dracula&hide=stars,contribs,issues&show=prs_merged,prs_authored,prs_commented,prs_reviewed&hide_rank=true&card_width=445&include_all_commits=true
+          #
+          # `repo` and `owner` are an allow-list, and the renderer has no
+          # deny-list for commits — `exclude_repo` only affects the star count.
+          # So every source of commits is listed here EXCEPT
+          # LaurenceHo/simple-photo-albums-demo, which mirrors
+          # LaurenceHo/simple-photo-albums commit for commit and would
+          # otherwise be counted twice (1234 total, 1058 without it).
+          #
+          # `author:LaurenceHo` is always part of the query, so naming an owner
+          # never pulls in anybody else's commits — it only widens which
+          # repositories are searched.
+          #
+          # MAINTENANCE: add new repositories of your own to `repo` below, or
+          # their commits will stop being counted.
+          options: |
+            {
+              "username": "LaurenceHo",
+              "show_icons": "true",
+              "theme": "dracula",
+              "hide": "stars,contribs,issues",
+              "show": "prs_merged,prs_commented,prs_reviewed",
+              "hide_rank": "true",
+              "card_width": "445",
+              "include_all_commits": "true",
+              "repo": [
+                "LaurenceHo/adventjs",
+                "LaurenceHo/angular4-express-mysql",
+                "LaurenceHo/electron-quasar-trip-management",
+                "LaurenceHo/health-onboarding-form",
+                "LaurenceHo/LaurenceHo",
+                "LaurenceHo/my-groceries",
+                "LaurenceHo/react-trip-planner",
+                "LaurenceHo/react-weather-app",
+                "LaurenceHo/simple-photo-albums",
+                "LaurenceHo/vue2-element-trip-planner"
+              ],
+              "owner": [
+                "BenchmarkGlobalPtyLtd",
+                "pradiptabasu",
+                "talentappstore"
+              ]
+            }
 
       - name: Generate the top languages card
         uses: stats-organization/github-readme-stats-action@f9d8133845f40d659a754f78b8484983ba766448 # v2.0.1
@@ -64,7 +105,11 @@ jobs:
           # No `role` parameter, so this stays at the OWNER default and reports
           # only your own repositories. Adding ORGANIZATION_MEMBER would pull in
           # employer repositories and publish their language mix.
-          options: username=LaurenceHo&layout=compact&theme=dracula&card_width=445
+          #
+          # OWNER does include the demo mirror, whose languages duplicate
+          # simple-photo-albums, so exclude it. Here `exclude_repo` takes bare
+          # repository names, unlike the stats card's owner/name form.
+          options: username=LaurenceHo&layout=compact&theme=dracula&card_width=445&exclude_repo=simple-photo-albums-demo
 
       - name: Commit the cards, but only if they actually changed
         run: |
