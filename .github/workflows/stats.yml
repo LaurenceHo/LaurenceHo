@@ -55,10 +55,16 @@ jobs:
           #
           # `repo` and `owner` are an allow-list, and the renderer has no
           # deny-list for commits — `exclude_repo` only affects the star count.
-          # So every source of commits is listed here EXCEPT
-          # LaurenceHo/simple-photo-albums-demo, which mirrors
-          # LaurenceHo/simple-photo-albums commit for commit and would
-          # otherwise be counted twice (1234 total, 1058 without it).
+          # So every source of commits is listed here EXCEPT two copies of
+          # LaurenceHo/simple-photo-albums, whose commits share the same SHAs
+          # and would otherwise each be counted a second time:
+          #
+          #   LaurenceHo/simple-photo-albums-demo    176  the public mirror
+          #   pradiptabasu/quasar-s3-photo-albums     55  a fork GitHub detached
+          #                                               when this repo went
+          #                                               private
+          #
+          # 1235 commits in total, 1004 once both copies are left out.
           #
           # `author:LaurenceHo` is always part of the query, so naming an owner
           # never pulls in anybody else's commits — it only widens which
@@ -90,7 +96,6 @@ jobs:
               ],
               "owner": [
                 "BenchmarkGlobalPtyLtd",
-                "pradiptabasu",
                 "talentappstore"
               ]
             }
