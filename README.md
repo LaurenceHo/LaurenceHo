@@ -32,6 +32,8 @@ A passionate full-stack developer based in Sydney, Australia. I write **Java**, 
   into this repository, rather than fetched from a third-party host at page load.
 -->
 
-![Laurence's GitHub statistics: commits, pull requests and code reviews over the past year](./profile/stats.svg)
+![Overall GitHub contributions since 2014, across public and private repositories](./profile/contributions.svg)
+
+![Laurence's GitHub statistics: total commits, pull requests, merges and code reviews](./profile/stats.svg)
 
 ![Laurence's most used programming languages, shown as a proportional bar chart](./profile/top-langs.svg)

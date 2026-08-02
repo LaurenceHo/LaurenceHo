@@ -116,11 +116,61 @@ jobs:
           # repository names, unlike the stats card's owner/name form.
           options: username=LaurenceHo&layout=compact&theme=dracula&card_width=445&exclude_repo=simple-photo-albums-demo
 
+      - name: Generate the overall contributions badge
+        env:
+          GH_TOKEN: ${{ secrets.STATS_PAT }}
+        run: |
+          # The stats card cannot show this. Its commit total comes from GitHub's
+          # code search index, which only covers repositories the token can still
+          # reach, so work in a former employer's private repositories is missing.
+          # The contribution calendar keeps that history, so read it directly.
+          #
+          # This counts contributions, not commits: commits plus issues opened,
+          # pull requests opened and reviews left. Label it accordingly.
+          current_year=$(date -u +%Y)
+
+          # One aliased collection per year — the API caps each at twelve months.
+          query='{ viewer {'
+          for year in $(seq 2014 "$current_year"); do
+            query="$query y${year}: contributionsCollection(from: \"${year}-01-01T00:00:00Z\", to: \"${year}-12-31T23:59:59Z\") { contributionCalendar { totalContributions } }"
+          done
+          query="$query } }"
+
+          total=$(gh api graphql -f query="$query" \
+            --jq '[.data.viewer[].contributionCalendar.totalContributions] | add')
+
+          if [ -z "$total" ] || [ "$total" -le 0 ]; then
+            echo "Refusing to write a badge for total='$total'." >&2
+            exit 1
+          fi
+
+          # Group thousands without depending on a locale, or on `rev` existing.
+          formatted=$(echo "$total" | sed -E ':a;s/([0-9])([0-9]{3})($|,)/\1,\2\3/;ta')
+          echo "Overall contributions since 2014: $formatted"
+
+          mkdir -p profile
+          cat > profile/contributions.svg <<SVG
+          <svg width="445" height="100" viewBox="0 0 445 100" fill="none"
+               xmlns="http://www.w3.org/2000/svg" role="img"
+               aria-label="Overall GitHub contributions since 2014: $formatted">
+            <style>
+              .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ff6e96 }
+              .value  { font: 700 30px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f8f8f2 }
+              .sub    { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f8f8f2; opacity: 0.7 }
+            </style>
+            <rect x="0.5" y="0.5" rx="4.5" width="444" height="99%"
+                  stroke="#e4e2e2" fill="#282a36" stroke-opacity="1" />
+            <text x="25" y="34" class="header">Overall Contributions</text>
+            <text x="25" y="74" class="value">$formatted</text>
+            <text x="420" y="74" class="sub" text-anchor="end">since 2014, public and private</text>
+          </svg>
+          SVG
+
       - name: Commit the cards, but only if they actually changed
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add profile/stats.svg profile/top-langs.svg
+          git add profile/stats.svg profile/top-langs.svg profile/contributions.svg
           # `git commit` fails when there is nothing staged, so guard it and keep
           # the run green on days where the numbers did not move.
           git diff --staged --quiet || git commit -m 'chore: refresh GitHub stats cards'
