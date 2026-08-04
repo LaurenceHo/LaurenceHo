@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Laurence Ho&#39;s GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Commits  : 1008, Total PRs: 453, Total PRs Merged: 426, PRs Commented: 317, PRs Reviewed: 295</desc>
+        <desc id="descId">Total Commits  : 1008, Total PRs: 454, Total PRs Merged: 426, PRs Commented: 319, PRs Reviewed: 297</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 66.03004226144283;
+        stroke-dashoffset: 66.02842158342338;
       }
     }
   
@@ -166,7 +166,7 @@
         x="174.01"
         y="12.5"
         data-testid="prs"
-      >453</text>
+      >454</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -196,7 +196,7 @@
         x="174.01"
         y="12.5"
         data-testid="prs_commented"
-      >317</text></a>
+      >319</text></a>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)"><a href="https://github.com/search?q=repo%3ALaurenceHo%2Fadventjs%20repo%3ALaurenceHo%2Fangular4-express-mysql%20repo%3ALaurenceHo%2Felectron-quasar-trip-management%20repo%3ALaurenceHo%2Fhealth-onboarding-form%20repo%3ALaurenceHo%2FLaurenceHo%20repo%3ALaurenceHo%2Fmy-groceries%20repo%3ALaurenceHo%2Freact-trip-planner%20repo%3ALaurenceHo%2Freact-weather-app%20repo%3ALaurenceHo%2Fsimple-photo-albums%20repo%3ALaurenceHo%2Fvue2-element-trip-planner%20owner%3ABenchmarkGlobalPtyLtd%20owner%3Atalentappstore%20reviewed-by%3ALaurenceHo+-author%3ALaurenceHo&amp;type=pullrequests">
@@ -211,7 +211,7 @@
         x="174.01"
         y="12.5"
         data-testid="prs_reviewed"
-      >295</text></a>
+      >297</text></a>
     </g>
   </g>
     </svg>
