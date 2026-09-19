@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Laurence Ho&#39;s GitHub Stats, Rank: A-</title>
-        <desc id="descId">Total Commits  : 1182, Total PRs: 630, Total PRs Merged: 598, PRs Commented: 450, PRs Reviewed: 426</desc>
+        <desc id="descId">Total Commits  : 1182, Total PRs: 631, Total PRs Merged: 598, PRs Commented: 450, PRs Reviewed: 426</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 63.344857551776286;
+        stroke-dashoffset: 63.344718219876945;
       }
     }
   
@@ -166,7 +166,7 @@
         x="174.01"
         y="12.5"
         data-testid="prs"
-      >630</text>
+      >631</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
